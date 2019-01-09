@@ -1,22 +1,29 @@
-console.log('App.js is running!');
+let snehith = {
+	name: 'snehith',
+	age: 26,
+	gender: 'm'
+};
 
-// JSX - JavaScript XML
-var template = (
-  <div>
-    <h1>Indecision App</h1>
-    <p>This is some info</p>
-    <ol>
-      <li>Item one</li>
-      <li>Item two</li>
-    </ol>
-  </div>
-);
+// later used for conditional checking
+let checkTrue = (name) => {
+	if(name == snehith.name)
+		return name;
+	else return undefined;
+}
+
+  // without curly braces, it would just print the text inside the h1 tags, 
+  // just like plain html
 
 var templateTwo = (
   <div>
-    <h1>Andrew Mead</h1>
+    <h1> {checkTrue('snehith')} </h1>
     <p>Age: 26</p>
     <p>Location: Philadelphia</p>
+
+    <ol>
+    	<li> {snehith.name} </li>
+    	<li> {snehith.age} </li>
+    </ol>	 
   </div>
 );
 
