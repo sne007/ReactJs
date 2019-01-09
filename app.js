@@ -27,6 +27,34 @@ var templateTwo = (
   </div>
 );
 
+
+let count = 0;
+
+let addOne = () => {
+	count += 1;
+	document.getElementById('add').innerHTML = count;
+}
+
+let reset = () => {
+	count  = 0;
+	document.getElementById('add').innerHTML = count;
+}
+
+let subtract = () => {
+	count -= 1;
+	document.getElementById('add').innerHTML = count;
+}
+
+let templateThree = (
+	<div>
+		<h1 id='add'> 0 </h1>
+		<button onClick = {addOne} > Add 1 </button>
+		<button onClick = {reset} > Reset </button>
+		<button onClick = {subtract} > Subtract 1</button>
+	</div>
+);
+
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(templateThree, appRoot);
